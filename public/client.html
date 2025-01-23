@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joystick</title>
+    <link rel="stylesheet" href="static/client.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="joystick" id="joystick1">
+      <div class="stick"></div>
+  </div>
+  
+  <!-- <button id="actionButton">MANDO ENABLED</button> -->
+  <button id="dropdownButton">MODO MANUAL</button>
+  <div id="dropdownContent" class="dropdown-content">
+      <input type="text" id="textInput" placeholder="Introduce texto">
+      <button id="submitButton">Enviar</button>
+  </div>
+  <fieldset>
+  <legend>Opciones</legend>
+  <div class="radio-container">
+    <label>
+        <input type="radio" name="options" value="Option 1" id="option1">
+        Caminata 1
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="options" value="Option 2" id="option2">
+        Caminata 2
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="options" value="Option 3" id="option3">
+        Caminata 3
+    </label>
+    <br>
+    <label>
+        <input type="radio" name="options" value="Option 4" id="option4">
+        Caminata 4
+    </label>
+</div>
+</fieldset>
+<div class="button-row">
+  <div class="button-container1">
+      <button class="rotating-btn" data-rotation="0" id="button1" data-button-number="1">&#9650;</button>
+      <div class="info-box">KP</div>
+  </div>
+  <div class="button-container2">
+      <button class="rotating-btn" data-rotation="0" id="button2" data-button-number="2">&#9658;</button>
+      <div class="info-box">KI</div>
+  </div>
+  <div class="button-container3">
+      <button class="rotating-btn" data-rotation="0" id="button3" data-button-number="3">&#9660;</button>
+      <div class="info-box">KD</div>
+  </div>
+</div>
+<div class="button-row">
+  <div class="button-container4">
+      <button class="rotating-btn" data-rotation="0" id="button4" data-button-number="4">&#9650;</button>
+      <div class="info-box">KP</div>
+  </div>
+  <div class="button-container5">
+      <button class="rotating-btn" data-rotation="0" id="button5" data-button-number="5">&#9658;</button>
+      <div class="info-box">KI</div>
+  </div>
+  <div class="button-container6">
+      <button class="rotating-btn" data-rotation="0" id="button6" data-button-number="6">&#9660;</button>
+      <div class="info-box">KD</div>
+  </div>
+</div>
+
+<div class="button-row">
+  <div class="button-container7">
+      <button class="rotating-btn" data-rotation="0" id="button7" data-button-number="7">&#9650;</button>
+      <div class="info-box">KP</div>
+  </div>
+  <div class="button-container8">
+      <button class="rotating-btn" data-rotation="0" id="button8" data-button-number="8">&#9658;</button>
+      <div class="info-box">KI</div>
+  </div>
+  <div class="button-container9">
+      <button class="rotating-btn" data-rotation="0" id="button9" data-button-number="9">&#9660;</button>
+      <div class="info-box">KD</div>
+  </div>
+</div>
+<div id="image-container"></div>
+
+<button id="button_1" class="button_control">   +   </button>
+<button id="button_2" class="button_control">   --   </button>
+<button id="button_3" class="button_control">   +   </button>
+<button id="button_4" class="button_control">   --   </button>
+<button id="button_5" class="button_control">   +   </button>
+<button id="button_6" class="button_control">   --   </button>
+<button id="button_7" class="button_control">   +   </button>
+<button id="button_8" class="button_control">   --   </button>
+<div id="pitch-chart-container">
+    <canvas id="pitch-chart"></canvas>
+</div> 
+
+<div id="roll-chart-container">
+    <canvas id="roll-chart"></canvas>
+</div> 
+
+<input type="text" id="input-text_roll" placeholder="Roll">
+<input type="text" id="input-text_pitch" placeholder="Pitch">
+<input type="text" id="input-text_yaw" placeholder="Yaw">
+<input type="text" id="input-text_z" placeholder="Altura:">
+
+  <!-- Load TensorFlow.js. This is required to use coco-ssd model. -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"> </script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"> </script>
+  <script src="/static/client.js"></script>
+
+</body>
+</html>
